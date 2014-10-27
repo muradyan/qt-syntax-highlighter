@@ -25,3 +25,12 @@ To run the application go to your build directory
 
     cd build
     ./highligher
+
+# Notes
+
+1. In real world application (for production, with richer UI) one would better
+use Qt designer to separate the UI description into XML.  Since this example
+project contains simple UI we keep things simple.
+
+2. Another imporvement of this project is to use MVC in order to decompose the
+business logic from the UI (make it more testable, maintainable, etc.).
