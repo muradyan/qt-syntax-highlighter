@@ -7,6 +7,9 @@
 
 class QTextDocument;
 
+/**
+ * @brief Extension of the QSyntaxHighlighter to add highlighting rules
+ */
 class Highlighter : public QSyntaxHighlighter
 {
 Q_OBJECT
@@ -25,13 +28,8 @@ private:
     };
     QVector<HighlightingRule> highlightingRules;
 
-    QRegExp commentStartExpression;
-    QRegExp commentEndExpression;
-
+    QTextCharFormat commentFormat;
     QTextCharFormat keywordFormat;
-    QTextCharFormat classFormat;
-    QTextCharFormat singleLineCommentFormat;
-    QTextCharFormat multiLineCommentFormat;
-    QTextCharFormat quotationFormat;
-    QTextCharFormat functionFormat;
+    QTextCharFormat breakingFormat;
+    QTextCharFormat numberFormat;
 };

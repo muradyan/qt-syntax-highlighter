@@ -1,7 +1,12 @@
 
 # Introduction
 
-A simple syntax highligher GUI application based on Qt library.
+A simple [LLL language syntax](https://github.com/ethereum/cpp-ethereum/wiki/LLL-PoC-6) highligher GUI application based on Qt library.
+
+The purpose of this exercise is by no means to create a production ready code.
+This is a simple prototype/PoC which can be extended/improved along with the
+language evolution and getting feedback from the designers on what/when/how
+should be highlighted.
 
 # Building
 
@@ -34,3 +39,7 @@ project contains simple UI we keep things simple.
 
 2. Another imporvement of this project is to use MVC in order to decompose the
 business logic from the UI (make it more testable, maintainable, etc.).
+
+3. When more rules are apparent it is worth to separate the patterns along with
+colouring scheme into a separate configuration file (based on json, XML or
+other format).
