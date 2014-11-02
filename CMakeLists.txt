@@ -19,13 +19,14 @@ endif()
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-# Find the QtWidgets library
-find_package(Qt5Widgets)
+# Find the required libraries
+find_package(Qt5 COMPONENTS Quick)
 
-aux_source_directory(src highlighter_sources)
+aux_source_directory(${CMAKE_SOURCE_DIR}/src highlighter_sources)
+file(GLOB highlighter_resources src/*.qrc)
+qt5_add_resources(highlighter_resources_rcc ${highlighter_resources})
 
 # Tell CMake to create the helloworld executable
-add_executable(highligher ${highlighter_sources})
+add_executable(highligher ${highlighter_sources} ${highlighter_resources_rcc})
 
-# Use the Widgets module from Qt 5.
-target_link_libraries(highligher Qt5::Widgets)
+qt5_use_modules(highligher Quick)

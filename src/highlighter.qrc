@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>main.qml</file>
+        <file>core/TextArea.qml</file>
+    </qresource>
+</RCC>
